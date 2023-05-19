@@ -14,15 +14,15 @@
     "pattern": "^(feature|bug)\\/[0-9]+-[a-z]+(?:_[a-z]+){0,3}$",
     "errorMsg": "Branch name should have proper pattern like feature/ticketNo-small_description"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "husky": "^8.0.3",
     "validate-branch-name": "^1.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "echo 'Your git commit is invalid please check https://www.conventionalcommits.org/en/v1.0.0-beta.2/' && $HUSKY_GIT_PARAMS"
+    }
   }
 }
