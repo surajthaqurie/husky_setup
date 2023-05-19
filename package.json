@@ -19,10 +19,5 @@
     "@commitlint/config-conventional": "^17.6.3",
     "husky": "^8.0.3",
     "validate-branch-name": "^1.3.0"
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "echo 'Your git commit is invalid please check https://www.conventionalcommits.org/en/v1.0.0-beta.2/' && $HUSKY_GIT_PARAMS"
-    }
   }
 }
