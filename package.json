@@ -4,9 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install && chmod +x .husky/*"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "validate-branch-name": {
+    "pattern": "^(feature|bug)\\/[0-9]+-[a-z]+(?:_[a-z]+){0,3}$",
+    "errorMsg": "Branch name should have proper pattern like feature/ticketNo-small_description"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3",
+    "validate-branch-name": "^1.3.0"
+  }
 }
